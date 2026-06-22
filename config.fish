@@ -1,4 +1,8 @@
 # ~/.config/fish/conf.d/25-my-additions.fish 
-fish_add_path $HOME/.npm-global/bin/ $HOME/Apps/android/sdk/emulator $HOME/Apps/android/sdk/build-tools $HOME/Apps/android/sdk/platform-tools $HOME/Apps/android/sdk/cmdline-tools/latest/bin
+set -gx ANDROID_HOME $HOME/Apps/Android/Sdk
+set -gx ANDROID_AVD_HOME $HOME/.config/.android/avd
+
+fish_add_path $HOME/.npm-global/bin/ $ANDROID_HOME/emulator $ANDROID_HOME/build-tools $ANDROID_HOME/platform-tools $ANDROID_HOME/cmdline-tools/latest/bin
 # ~/.config/fish/conf.d/00_init.fish
-fish_add_path 
+fish_add_path $HOME/.cargo/bin/
+fish_add_path $HOME/.local/bin/
